@@ -6,8 +6,7 @@
   "scripts": {
     "start": "func start",
     "lint": "eslint --fix \"./**/*.js\"",
-    "format":
-      "prettier --write \"{graphql,ingredient,recipe,utils}/**/*.{js,json}\""
+    "format": "prettier --write \"{graphql,ingredient,recipe,utils}/**/*.{js,json}\""
   },
   "keywords": [],
   "author": "Brian Holt <btholt+graphql.functions@gmail.com>",
@@ -19,5 +18,13 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "prettier": "^1.12.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/btholt/graphql-on-azure-functions.git"
+  },
+  "bugs": {
+    "url": "https://github.com/btholt/graphql-on-azure-functions/issues"
+  },
+  "homepage": "https://github.com/btholt/graphql-on-azure-functions#readme"
 }
