@@ -1,0 +1,9 @@
+{
+  "extends": "eslint:recommended",
+  "rules": {},
+  "env": {
+    "es6": true,
+    "commonjs": true
+  },
+  "globals": {}
+}

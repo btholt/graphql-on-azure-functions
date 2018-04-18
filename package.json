@@ -1,0 +1,23 @@
+{
+  "name": "graphql-recipe-api",
+  "version": "1.0.0",
+  "description": "GraphQL on top of Azure Functions",
+  "main": "graphql/index.js",
+  "scripts": {
+    "start": "func start",
+    "lint": "eslint --fix \"./**/*.js\"",
+    "format":
+      "prettier --write \"{graphql,ingredient,recipe,utils}/**/*.{js,json}\""
+  },
+  "keywords": [],
+  "author": "Brian Holt <btholt+graphql.functions@gmail.com>",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "graphql": "^0.13.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "prettier": "^1.12.1"
+  }
+}
