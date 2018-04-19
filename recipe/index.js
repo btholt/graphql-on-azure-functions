@@ -1,5 +1,5 @@
 const axios = require("axios");
-const key = process.env.FOODTOFORK_KEY || require("../secrets.json").foodToFork;
+const key = process.env.FOOD2FORK_KEY || require("../secrets.json").foodToFork;
 const baseUrl = require("../utils/baseUrl");
 
 module.exports = function(context, req) {
