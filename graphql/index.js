@@ -1,5 +1,6 @@
 const { graphql, buildSchema } = require("graphql");
 const axios = require("axios");
+const baseUrl = require("../utils/baseUrl");
 
 const schema = buildSchema(`
     type Recipe {
@@ -78,7 +79,7 @@ const schema = buildSchema(`
 const root = {
   recipe(obj, args, context) {
     return axios
-      .post("http://localhost:7071/api/recipe", {
+      .post(`${baseUrl}/api/recipe`, {
         name: obj.name,
         args,
         context
@@ -87,7 +88,7 @@ const root = {
   },
   ingredient(obj, args, context) {
     return axios
-      .post("http://localhost:7071/api/ingredient", { name: obj.name, context })
+      .post(`${baseUrl}/api/ingredient`, { name: obj.name, context })
       .then(res => res.data);
   }
 };

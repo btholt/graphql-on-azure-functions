@@ -1,5 +1,6 @@
 const axios = require("axios");
-const key = require("../secrets.json").foodToFork;
+const key = process.env.FOODTOFORK_KEY || require("../secrets.json").foodToFork;
+const baseUrl = require("../utils/baseUrl");
 
 module.exports = function(context, req) {
   let recipe;
@@ -20,7 +21,7 @@ module.exports = function(context, req) {
     .then(res => {
       recipe = res.data.recipe;
       context.log(JSON.stringify(req.body.args, null, 4));
-      return axios.post("http://localhost:7071/api/ingredient", {
+      return axios.post(`${baseUrl}/api/ingredient`, {
         name: recipe.ingredients.join(", "),
         context: req.body.context ? req.body.context : void 0
       });
