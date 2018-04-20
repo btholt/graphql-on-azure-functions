@@ -14,8 +14,8 @@ module.exports = function(context, req) {
       {
         headers: {
           "Content-Type": "application/json",
-          "x-app-id": keys.nutritionix.id,
-          "x-app-key": keys.nutritionix.key
+          "x-app-id": process.env.NUTRITIONIX_ID || keys.nutritionix.id,
+          "x-app-key": process.env.NUTRITIONIX_KEY || keys.nutritionix.key
         }
       }
     )

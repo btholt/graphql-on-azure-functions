@@ -18,7 +18,10 @@ The [Nutritionix API][nutritionix] and [Food2Fork API][food2fork].
 
 1.  Install Node 8 (I suggest using nvm)
 1.  `npm i -g azure-functions-core-tools@core`
-1.  Signup for both the Nutritionix and Food2Fork APIs and put your ids and keys in the `secrets.json` file.
+1.  Signup for both the Nutritionix and Food2Fork APIs. Put your ids and keys in the `secrets.json` file or set these enviroment variables (Application Settings in Azure):
+    * `NUTRITIONIX_ID`
+    * `NUTRITIONIX_KEY`
+    * `FOOD2FORK_KEY`
 1.  `npm run start`
 1.  Endpoints should be queryable (I'm using Postman) via localhost:7071
 
