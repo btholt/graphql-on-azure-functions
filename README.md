@@ -29,5 +29,5 @@ The [Nutritionix API][nutritionix] and [Food2Fork API][food2fork].
 
 Apache 2.0. Go nuts.
 
-[nutrtionix]: https://www.nutritionix.com/business/api
+[nutritionix]: https://www.nutritionix.com/business/api
 [food2fork]: http://food2fork.com/about/api
