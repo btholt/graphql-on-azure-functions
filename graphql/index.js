@@ -94,9 +94,11 @@ const root = {
 };
 
 module.exports = function(context, req) {
-  context.log(`GraphQL request: ${req.body}`);
+  const query = req.body.query;
 
-  graphql(schema, req.body, root).then(response => {
+  context.log(`GraphQL request: ${query}`);
+
+  graphql(schema, query, root).then(response => {
     context.res = {
       body: response
     };
